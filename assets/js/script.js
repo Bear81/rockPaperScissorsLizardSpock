@@ -6,16 +6,17 @@ let compChoice;
 let result;
 
 // Game options
-const gameOptions = ["rock", "paper", "scissors", "lizard", "spock"]
+const gameOptions = ["rock", "paper", "scissors", "lizard", "spock"];
 
 // Remove Console.Log() after testing
 /**
  * Updates variable userChoice when the user selects their move
  * @param {*} choice 
  */
-function getUserChoice(choice){
+function getUserChoice(choice) {
     userChoice = choice;
     getComputerChocie();
+    gameWinner()
     console.log(`User chooses: ${userChoice}`);
 }
 
@@ -23,32 +24,36 @@ function getUserChoice(choice){
 /**
  * Generates computer chocie randomly
  */
-function getComputerChocie(){
+function getComputerChocie() {
     const randomIndex = Math.floor(Math.random() * gameOptions.length);
     compChoice = gameOptions[randomIndex];
-    console.log(`Computer chooses: ${compChoice}`)
+    console.log(`Computer chooses: ${compChoice}`);
 }
 
 // Remove Console.Log() after testing
 /**
  * Logic to determine the winner of each game
  */
-function gameWinner(){
-    if (userChoice === compChoice){
+function gameWinner() {
+    console.log('gameWinner function called');
+    if (userChoice === compChoice) {
         result = "It\s a draw";
     }
     else if (
-            (userChoice === "rock" && (compChoice === "scissors" || compChoice === "lizard")) ||
-            (userChoice === "paper" && (compChoice === "rock" || compChoice === "spock")) ||
-            (userChoice === "scissors" && (compChoice === "paper" || compChoice === "lizard")) ||
-            (userChoice === "lizard" && (compChoice === "paper" || compChoice === "spock")) ||
-            (userChoice === "spock" && (compChoice === "rock" || compChoice === "scissors"))
-            ) {
-                result = "You win!";
-                userscore++; 
-            } else {
-                result = "Computer wins!";
-                compScore++;
-            }
-    console.log(result);
+        (userChoice === "rock" && (compChoice === "scissors" || compChoice === "lizard")) ||
+        (userChoice === "paper" && (compChoice === "rock" || compChoice === "spock")) ||
+        (userChoice === "scissors" && (compChoice === "paper" || compChoice === "lizard")) ||
+        (userChoice === "lizard" && (compChoice === "paper" || compChoice === "spock")) ||
+        (userChoice === "spock" && (compChoice === "rock" || compChoice === "scissors"))
+    ) {
+        result = "You win!";
+        userScore++;
+    } else {
+        result = "Computer wins!";
+        compScore++;
     }
+    console.log(result);
+}
+
+
+
