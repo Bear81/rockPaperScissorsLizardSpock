@@ -22,3 +22,38 @@ main {
     height: 100vh;
 }
 
+/* Positioning the game container and styles */
+#game-container {
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Instructions section */
+#instructions {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Options sections */
+#game-container .options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+/* Button section */
+#game-container .options button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: grab;
+}
+
+#game-container .scoreboard {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
