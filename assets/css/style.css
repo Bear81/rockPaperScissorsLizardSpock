@@ -51,11 +51,13 @@ a:hover {
 #game-container .options {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
 /* Button section styles*/
 #game-container .options button {
+    margin: 10px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: grab;
