@@ -32,26 +32,36 @@ main {
     max-width: 600px;
 }
 
-/* Instructions section */
+/* Instructions section styles*/
 #instructions {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-/* Options sections */
+#instructions a {
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+a:hover {
+    color: #555;
+}
+
+/* Options sections styles*/
 #game-container .options {
     display: flex;
     justify-content: space-around;
     margin-bottom: 2rem;
 }
 
-/* Button section */
+/* Button section styles*/
 #game-container .options button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: grab;
 }
 
+/* Scoreboard area styles */
 #game-container .scoreboard {
     text-align: center;
     font-size: 24px;
