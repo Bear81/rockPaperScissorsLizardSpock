@@ -8,6 +8,14 @@ let result;
 // Game options
 const gameOptions = ["rock", "paper", "scissors", "lizard", "spock"];
 
+/**
+ * Update scores on the html
+ */
+function updateScore(){
+    document.getElementById("player-score").textContent = userScore;
+    document.getElementById("comp-score").textContent = compScore;
+}
+
 // Remove Console.Log() after testing
 /**
  * Updates variable userChoice when the user selects their move
@@ -17,6 +25,7 @@ function getUserChoice(choice) {
     userChoice = choice;
     getComputerChocie();
     gameWinner()
+    updateScore()
     console.log(`User chooses: ${userChoice}`);
 }
 
@@ -55,5 +64,6 @@ function gameWinner() {
     console.log(result);
 }
 
+// Event listeners
 
 
