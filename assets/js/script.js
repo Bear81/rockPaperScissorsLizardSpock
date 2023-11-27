@@ -5,8 +5,14 @@ let userChoice;
 let compChoice;
 let result;
 
-// Get user choice
+// Remove Console.Log() after testing
+/**
+ * Updates variable userChoice when the user selects their move
+ * @param {*} choice 
+ */
 function getUserChoice(choice){
     userChoice = choice;
     console.log(`User chooses: ${userChoice}`);
 }
+
+
