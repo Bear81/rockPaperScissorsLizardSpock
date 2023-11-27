@@ -5,6 +5,13 @@ let userChoice;
 let compChoice;
 let result;
 
+let rock = document.getElementById("rock")
+let paper = document.getElementById("paper")
+let scissors = document.getElementById("scissors")
+let lizard = document.getElementById("lizard")
+let spock = document.getElementById("spock")
+
+
 // Game options
 const gameOptions = ["rock", "paper", "scissors", "lizard", "spock"];
 
@@ -18,10 +25,9 @@ function updateScore(){
 
 // Remove Console.Log() after testing
 /**
- * Updates variable userChoice when the user selects their move
- * @param {*} choice 
+ * Updates variable userChoice when the user selects their move 
  */
-function getUserChoice(choice) {
+function handleUserChoice(choice) {
     userChoice = choice;
     getComputerChocie();
     gameWinner()
@@ -65,5 +71,22 @@ function gameWinner() {
 }
 
 // Event listeners
+rock.addEventListener("click", function() {
+    handleUserChoice("rock");
+});
 
+paper.addEventListener("click", function () {
+    handleUserChoice("paper");
+});
 
+scissors.addEventListener("click", function () {
+    handleUserChoice("scissors");
+});
+
+lizard.addEventListener("click", function () {
+    handleUserChoice("lizard");
+});
+
+spock.addEventListener("click", function () {
+    handleUserChoice("spock");
+});
