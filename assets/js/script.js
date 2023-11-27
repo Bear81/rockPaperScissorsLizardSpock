@@ -20,7 +20,6 @@ function getUserChoice(choice){
 }
 
 // Remove Console.Log() after testing
-
 /**
  * Generates computer chocie randomly
  */
@@ -29,3 +28,27 @@ function getComputerChocie(){
     compChoice = gameOptions[randomIndex];
     console.log(`Computer chooses: ${compChoice}`)
 }
+
+// Remove Console.Log() after testing
+/**
+ * Logic to determine the winner of each game
+ */
+function gameWinner(){
+    if (userChoice === compChoice){
+        result = "It\s a draw";
+    }
+    else if (
+            (userChoice === "rock" && (compChoice === "scissors" || compChoice === "lizard")) ||
+            (userChoice === "paper" && (compChoice === "rock" || compChoice === "spock")) ||
+            (userChoice === "scissors" && (compChoice === "paper" || compChoice === "lizard")) ||
+            (userChoice === "lizard" && (compChoice === "paper" || compChoice === "spock")) ||
+            (userChoice === "spock" && (compChoice === "rock" || compChoice === "scissors"))
+            ) {
+                result = "You win!";
+                userscore++; 
+            } else {
+                result = "Computer wins!";
+                compScore++;
+            }
+    console.log(result);
+    }
