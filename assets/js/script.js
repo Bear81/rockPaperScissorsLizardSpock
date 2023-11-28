@@ -82,6 +82,14 @@ function updateGameResult() {
     userChoiceDiv.appendChild(userChoiceHeading);
     gameResultContainer.appendChild(userChoiceDiv)
     console.log("updateGameResult() was called")
+    const compChoiceDiv = document.createElement("div");
+    compChoiceDiv.id = "comp-choice";
+    const compChoiceHeading = document.createElement("h2");
+    // ${userChoice.charAt(0).toUpperCase()}${userChoice.slice(1)}` attribution to 
+    compChoiceHeading.textContent = `Computer chose: ${compChoice.charAt(0).toUpperCase()}${compChoice.slice(1)}`;
+    compChoiceDiv.appendChild(compChoiceHeading);
+    gameResultContainer.appendChild(compChoiceDiv);
+    console.log("updateGameResult() was called");
 }
 
 // Event listeners
