@@ -1,6 +1,6 @@
 /* Base styling, remove borders/margins */
 * {
-    outline: 1px solid limegreen !important;
+    /* outline: 1px solid limegreen !important; */
 }
 *,
 *:before,
@@ -28,6 +28,7 @@ main {
     flex: 1 0 auto;
     justify-content: center;
     align-items: center;
+    background: url(../images/night-skyv2.webp) no-repeat center;
 }
 
 #game-container {
