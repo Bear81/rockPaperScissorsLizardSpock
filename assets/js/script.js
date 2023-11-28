@@ -32,6 +32,7 @@ function handleUserChoice(choice) {
     getComputerChocie();
     gameWinner()
     updateScore()
+    updateGameResult()
     console.log(`User chooses: ${userChoice}`);
 }
 
@@ -68,6 +69,19 @@ function gameWinner() {
         compScore++;
     }
     console.log(result);
+}
+
+function updateGameResult() {
+    const gameResultContainer = document.getElementById("game-result");
+    gameResultContainer.innerHTML = "";
+    const userChoiceDiv = document.createElement("div");
+    userChoiceDiv.id = "user-choice";
+    const userChoiceHeading = document.createElement("h2");
+    // ${userChoice.charAt(0).toUpperCase()}${userChoice.slice(1)}` attribution to 
+    userChoiceHeading.textContent = `You chose: ${userChoice.charAt(0).toUpperCase()}${userChoice.slice(1)}`;
+    userChoiceDiv.appendChild(userChoiceHeading);
+    gameResultContainer.appendChild(userChoiceDiv)
+    console.log("updateGameResult() was called")
 }
 
 // Event listeners
