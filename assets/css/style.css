@@ -46,7 +46,7 @@ main {
     gap: 10px;
 }
 
-.options {
+#options {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -56,7 +56,13 @@ main {
     border-top: black solid 2px;
 }
 
-.options img {
+#options img {
+    width: clamp(120px, 150px, 200px);
+    border-radius: 50%;
+    margin: .5rem;
+}
+
+#game-result img {
     width: clamp(120px, 150px, 200px);
     border-radius: 50%;
     margin: .5rem;
