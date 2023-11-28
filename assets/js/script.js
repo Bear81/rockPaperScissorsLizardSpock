@@ -89,7 +89,7 @@ function updateGameResult() {
     const userChoiceImg = document.createElement("img");
     userChoiceImg.id = "user-img";
     userChoiceImg.alt = "Image of users choice";
-    userChoiceImg.src = "assets/images/lizard.webp";
+    userChoiceImg.src = `assets/images/${userChoice}.webp`;
     userChoiceDiv.appendChild(userChoiceImg);
     
 
@@ -106,7 +106,7 @@ function updateGameResult() {
     const compChoiceImg = document.createElement("img");
     compChoiceImg.id = "comp-img";
     compChoiceImg.alt = "Image of computers choice";
-    compChoiceImg.src = "";
+    compChoiceImg.src = `assets/images/${compChoice}.webp`;
     compChoiceDiv.appendChild(compChoiceImg);
     
 }
