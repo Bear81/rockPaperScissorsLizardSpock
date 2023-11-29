@@ -1,3 +1,6 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Play&display=swap');
+
 /* Base styling, remove borders/margins */
 *,
 *:before,
@@ -12,10 +15,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-        background-image: radial-gradient(circle at center center, rgb(241, 195, 19), rgb(244, 150, 32), rgb(246, 105, 45), rgb(249, 59, 57), rgb(251, 14, 70));
+    background-image: radial-gradient(circle at center center, rgb(241, 195, 19), rgb(244, 150, 32), rgb(246, 105, 45), rgb(249, 59, 57), rgb(251, 14, 70));
 }
 
 header {
+    font-family: 'Play', sans-serif;
     background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
     text-align: center;
@@ -26,6 +30,7 @@ main {
     flex: 1 0 auto;
     justify-content: center;
     align-items: center;
+    font-family: 'Play', sans-serif;
 }
 
 /* Used button styling website - uiverse.io */
@@ -35,6 +40,7 @@ button {
     border: 0;
     background-color: rgba(255, 255, 255, 0.219);
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    color: hsl(261deg 80% 48%);
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-size: 15px;
@@ -69,6 +75,7 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #fff;
     padding: 10px;
     gap: 10px;
 }
@@ -88,16 +95,24 @@ button:active {
 }
 
 .popup-content {
-    background-color: #fefefe;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-family: 'Lato', sans-serif;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.popup-content li {
+    list-style-type: none;
 }
 
 .close-btn {
     margin-top: 1rem;
     font-size: 20px;
     cursor: pointer;
+    /* display: block;
+    margin: 0 auto; */
 }
 
 #options {
@@ -145,10 +160,8 @@ button:active {
 
 .scoreboard-table {
     padding: .5rem;
-    /* border: solid 2px black; */
+    font-family: 'Play', sans-serif;
     font-size: 1rem;
-    font-family: 'Teko', sans-serif;
-    font-weight: 400;
     text-align: center;
 }
 
