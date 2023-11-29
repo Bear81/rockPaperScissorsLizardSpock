@@ -1,6 +1,7 @@
 // Starting Variables
 let userScore = "0";
 let compScore = "0";
+let draws = "0"
 let userChoice;
 let compChoice;
 let result;
@@ -19,8 +20,10 @@ const gameOptions = ["rock", "paper", "scissors", "lizard", "spock"];
  * Update scores on the html
  */
 function updateScore(){
-    document.getElementById("player-score").textContent = userScore;
-    document.getElementById("comp-score").textContent = compScore;
+    document.getElementById("player-wins").textContent = userScore;
+    document.getElementById("player-losses").textContent = compScore;
+    document.getElementById("draws").textContent = draws;
+
 }
 
 // Remove Console.Log() after testing
@@ -32,6 +35,7 @@ function handleUserChoice(choice) {
     getComputerChocie();
     gameWinner()
     updateScore()
+    gameResult()
     updateGameResult()
     console.log(`User chooses: ${userChoice}`);
 }
@@ -54,6 +58,7 @@ function gameWinner() {
     console.log('gameWinner function called');
     if (userChoice === compChoice) {
         result = "It\s a draw";
+        draws++;
     }
     else if (
         (userChoice === "rock" && (compChoice === "scissors" || compChoice === "lizard")) ||
@@ -65,23 +70,37 @@ function gameWinner() {
         result = "You win!";
         userScore++;
     } else {
-        result = "Computer wins!";
+        result = "ShelBot wins!";
         compScore++;
     }
     console.log(result);
+}
+
+function gameResult() {
+    const gameResultDisplay = document.getElementById("display-result");
+    gameResultDisplay.innerHTML = "";
+    
+    //Add game results div and text
+    const gameResultDiv = document.createElement("div");
+    gameResultDiv.id = "display-game-result";
+    const displayGameResult = document.createElement("h2");
+    displayGameResult.textContent = `${result}`;
+    gameResultDisplay.appendChild(gameResultDiv);
+    gameResultDiv.appendChild(displayGameResult);
+    console.log("gameResult() was called")
 }
 
 function updateGameResult() {
     //Clear game results container
     const gameResultContainer = document.getElementById("game-result");
     gameResultContainer.innerHTML = "";
-    
+
     //Add user results div and text
     const userChoiceDiv = document.createElement("div");
     userChoiceDiv.id = "user-choice";
     const userChoiceHeading = document.createElement("h2");
     // ${userChoice.charAt(0).toUpperCase()}${userChoice.slice(1)}` attribution to 
-    userChoiceHeading.textContent = `You chose: ${userChoice.charAt(0).toUpperCase()}${userChoice.slice(1)}`;
+    userChoiceHeading.textContent = `You: ${userChoice.charAt(0).toUpperCase()}${userChoice.slice(1)}`;
     gameResultContainer.appendChild(userChoiceDiv);
     userChoiceDiv.appendChild(userChoiceHeading);
     
@@ -98,7 +117,7 @@ function updateGameResult() {
     compChoiceDiv.id = "comp-choice";
     const compChoiceHeading = document.createElement("h2");
     // ${userChoice.charAt(0).toUpperCase()}${userChoice.slice(1)}` attribution to 
-    compChoiceHeading.textContent = `Computer chose: ${compChoice.charAt(0).toUpperCase()}${compChoice.slice(1)}`;
+    compChoiceHeading.textContent = `ShelBot: ${compChoice.charAt(0).toUpperCase()}${compChoice.slice(1)}`;
     gameResultContainer.appendChild(compChoiceDiv);
     compChoiceDiv.appendChild(compChoiceHeading);
 

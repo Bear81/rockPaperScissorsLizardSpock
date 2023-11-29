@@ -22,25 +22,32 @@
         <!-- users choice area - maybe upgrade buttons to icons? -->
         <section id="options">
             <img id="rock" src="assets/images/rock.webp" alt="Rock - Image of Dwayne Johnson - aka the Rock">
-            <img src="assets/images/paper.webp" alt="Paper - Image of a paper airplane">
-            <img src="assets/images/scissors.webp" alt="Scissors - Cartoon hand making a scissors gesture">
-            <img src="assets/images/lizard.webp" alt="Lizard - Cartoon image of a lizard">
-            <img src="assets/images/spock.webp" alt="Spock - Cartoon image of Spock">
-           <!-- <button id="rock">Rock</button>
-           <button id="paper">Paper</button>
-           <button id="scissors">Scissors</button>
-           <button id="lizard">Lizard</button>
-           <button id="spock">Spock</button>  -->
+            <img id="paper" src="assets/images/paper.webp" alt="Paper - Image of a paper airplane">
+            <img id="scissors" src="assets/images/scissors.webp" alt="Scissors - Cartoon hand making a scissors gesture">
+            <img id="lizard" src="assets/images/lizard.webp" alt="Lizard - Cartoon image of a lizard">
+            <img id="spock" src="assets/images/spock.webp" alt="Spock - Cartoon image of Spock">
         </section>
         <!-- game result section - populated via js -->
+        <Section id="display-result"></Section>
         <section id="game-result"></section>
         <!-- scoreboard -->
         <section class="scoreboard">
-            <p>
-                <span id="player-score">0</span>
-                 - 
-                <span id="comp-score">0</span> 
-            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Draws</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="player-wins">0</td>
+                        <td id="player-losses">0</td>
+                        <td id="draws">0</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         </section>
     </main>
