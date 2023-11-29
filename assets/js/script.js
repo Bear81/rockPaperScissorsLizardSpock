@@ -148,6 +148,7 @@ function resetGame(){
     document.getElementById("player-wins").textContent = "0";
     document.getElementById("player-losses").textContent = "0";
     document.getElementById("draws").textContent = "0";
+    document.getElementById("display-game-result").textContent = ""
     const gameResultContainer = document.getElementById("game-result");
     gameResultContainer.innerHTML = "";
 

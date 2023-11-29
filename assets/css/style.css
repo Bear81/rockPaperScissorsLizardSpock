@@ -122,19 +122,28 @@ button:active {
     flex-wrap: wrap;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    border-top: black solid 2px;
+    border-top: rgba(0, 0, 0, 0.5) solid 2px;
+    border-bottom: rgba(0, 0, 0, 0.5) solid 2px;
 }
 
 #options img {
     width: clamp(100px, 120px, 200px);
     border-radius: 50%;
     margin: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#options img:hover {
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
 }
 
 #game-result img {
     width: clamp(100px, 120px, 200px);
     border-radius: 50%;
     margin: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #game-result {
@@ -159,10 +168,12 @@ button:active {
 }
 
 .scoreboard-table {
+    background-color: rgba(0, 0, 0, 0.2);
     padding: .5rem;
     font-family: 'Play', sans-serif;
     font-size: 1rem;
     text-align: center;
+    margin-bottom: .5rem;
 }
 
 .scoreboard-table th, .scoreboard-table td {
