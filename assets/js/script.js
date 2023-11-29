@@ -130,6 +130,17 @@ function updateGameResult() {
     
 }
 
+function resetGame(){
+    userScore = "0";
+    compScore = "0";
+    document.getElementById("player-wins").textContent = "0";
+    document.getElementById("player-losses").textContent = "0";
+    document.getElementById("draws").textContent = "0";
+    const gameResultContainer = document.getElementById("game-result");
+    gameResultContainer.innerHTML = "";
+
+}
+
 // Event listeners
 rock.addEventListener("click", function() {
     handleUserChoice("rock");
