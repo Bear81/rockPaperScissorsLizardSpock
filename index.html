@@ -12,114 +12,105 @@
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <!-- Maybe add disappearing Nav bar later -->
     <header>
         <h1>Rock Paper Scissors Lizard Spock</h1>
     </header>
 
     <main>
-        <section id="game-container">
-        <section id="instructions">
-            <h1>Choose your move!</h1>
-            <!-- Add a button to trigger the popup -->
-            <button id="rules-btn" onclick="openRulesPopup()">Game Rules</button>
-            
-            <!-- Popup container -->
-            <div id="rules-popup" class="popup">
-                <!-- Close button for the popup -->
-                <span class="close-btn" onclick="closeRulesPopup()">&times;</span>
-                <!-- Content of the popup -->
-                <div class="popup-content">
-                    <h2>Game Rules</h2>
-                    <ul id="game-rule-list">
-                        <li>Scissors cuts Paper</li>
-                        <li>Paper covers Rock</li>
-                        <li>Rock crushes Lizard</li>
-                        <li>Lizard poisons Spock</li>
-                        <li>Spock smashes Scissors</li>
-                        <li>Scissors decapitates Lizard</li>
-                        <li>Lizard eats Paper</li>
-                        <li>Paper disproves Spock</li>
-                        <li>Spock vaporizes Rock</li>
-                        <li>(and as it always has) Rock crushes Scissors</li>
-                    </ul>
-                    <button class="close-btn" onclick="closeRulesPopup()">Close</button>
+        <section id="game-container" aria-labelledby="instructions">
+            <div id="instructions" aria-labelledby="instructions-heading">
+                <h2 id="instructions-heading">Choose your move!</h2>
+                <button id="rules-btn" onclick="openRulesPopup()" aria-label="Open Game Rules">Game Rules</button>
+                
+                <div id="rules-popup" class="popup" role="dialog" aria-labelledby="rules-popup-heading" aria-modal="true">
+                    <span class="close-btn" onclick="closeRulesPopup()" aria-label="Close Game Rules">&times;</span>
+                    <div class="popup-content">
+                        <h2 id="rules-popup-heading">Game Rules</h2>
+                        <ul id="game-rule-list">
+                            <li>Scissors cuts Paper</li>
+                            <li>Paper covers Rock</li>
+                            <li>Rock crushes Lizard</li>
+                            <li>Lizard poisons Spock</li>
+                            <li>Spock smashes Scissors</li>
+                            <li>Scissors decapitates Lizard</li>
+                            <li>Lizard eats Paper</li>
+                            <li>Paper disproves Spock</li>
+                            <li>Spock vaporizes Rock</li>
+                            <li>(and as it always has) Rock crushes Scissors</li>
+                        </ul>
+                        <button class="close-btn" onclick="closeRulesPopup()" aria-label="Close Game Rules">Close</button>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- users choice area - maybe upgrade buttons to icons? -->
-        <section id="options">
-            <img id="rock" src="assets/images/rock.webp" alt="Rock - Image of Dwayne Johnson - aka the Rock">
-            <img id="paper" src="assets/images/paper.webp" alt="Paper - Image of a paper airplane">
-            <img id="scissors" src="assets/images/scissors.webp" alt="Scissors - Cartoon hand making a scissors gesture">
-            <img id="lizard" src="assets/images/lizard.webp" alt="Lizard - Cartoon image of a lizard">
-            <img id="spock" src="assets/images/spock.webp" alt="Spock - Cartoon image of Spock">
-        </section>
-        <!-- game result section - populated via js -->
-        <Section id="display-result"></Section>
-        <section id="game-result"></section>
-        <!-- scoreboard -->
-        <section class="scoreboard">
-            <table class="scoreboard-table">
-                <thead>
-                    <tr>
-                        <th>Wins</th>
-                        <th>Losses</th>
-                        <th>Draws</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="player-wins">0</td>
-                        <td id="player-losses">0</td>
-                        <td id="draws">0</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section id="reset">
-            <button id="reset-button" onclick="resetGame()">RESET</button></section>
+
+            <div id="options" aria-label="User's choice area">
+                <img id="rock" src="assets/images/rock.webp" alt="Rock - Image of Dwayne Johnson - aka the Rock">
+                <img id="paper" src="assets/images/paper.webp" alt="Paper - Image of a paper airplane">
+                <img id="scissors" src="assets/images/scissors.webp" alt="Scissors - Cartoon hand making a scissors gesture">
+                <img id="lizard" src="assets/images/lizard.webp" alt="Lizard - Cartoon image of a lizard">
+                <img id="spock" src="assets/images/spock.webp" alt="Spock - Cartoon image of Spock">
+            </div>
+
+            <div id="display-result" aria-live="polite" aria-atomic="true"></div>
+            <div id="game-result" aria-live="polite" aria-atomic="true"></div>
+
+            <div class="scoreboard" aria-label="Game scoreboard">
+                <table class="scoreboard-table">
+                    <thead>
+                        <tr>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                            <th>Draws</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="player-wins">0</td>
+                            <td id="player-losses">0</td>
+                            <td id="draws">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="reset" aria-label="Reset game">
+                <button id="reset-button" onclick="resetGame()">RESET</button>
+            </div>
         </section>
     </main>
-        <footer>
-            <!-- Social Media links -->
-            <!-- The Social Media icon code was taken from Love Running project -->
-            <div>
-                <ul id="social-networks">
-                    <li>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                            aria-label="Visit our Facebook page (opens in a new tab)">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                            aria-label="Visit our Twitter page (opens in a new tab)">
-                            <i class="fa-brands fa-twitter-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/" target="_blank" rel="noopener"
-                            aria-label="Visit our YouTube page (opens in a new tab)">
-                            <i class="fa-brands fa-youtube-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                            aria-label="Visit our Instagram page (opens in a new tab)">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-        <!-- Font Awesome Kit -->
-        <script src="https://kit.fontawesome.com/7ee4a7d5ee.js" crossorigin="anonymous"></script>
-        </body>
-        
-        </html>
+
+    <footer>
+        <div>
+            <ul id="social-networks" aria-label="Social media links">
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter page (opens in a new tab)">
+                        <i class="fa-brands fa-twitter-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our YouTube page (opens in a new tab)">
+                        <i class="fa-brands fa-youtube-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (opens in a new tab)">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
+    <script src="https://kit.fontawesome.com/7ee4a7d5ee.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

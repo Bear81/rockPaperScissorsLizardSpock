@@ -1,39 +1,116 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock Paper Scissors Lizard SpockGame
 
-Welcome,
+## Purpose
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The purpose of this project is to provide a simple and interactive implementation of the "Rock Paper Scissors Lizard Spock" game. It aims to entertain users by allowing them to play the game against a computer opponent and improve their decision-making skills by strategizing various moves.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Intended Target Audience
 
-## Codeanywhere Reminders
+This project is designed for individuals of all ages who enjoy casual and engaging games. Whether you're a fan of classic games or looking for a quick and entertaining pastime, this application is suitable for a broad audience. It's user-friendly, accessible, and provides a fun way to spend leisure time.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Features
 
-`python3 -m http.server`
+![Am I Responsive](assets/images/documentation/Am-I-Responsive.png)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Feature Screenshot](assets/images/documentation/rpsls.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+- **User Interaction:**
+  - Users can make their move by selecting one of the available options: Rock, Paper, Scissors, Lizard, or Spock.
+  - The game provides a responsive and interactive interface for a seamless user experience.
 
-`http_server`
+- **Computer Opponent:**
+  - The computer opponent randomly selects its move, creating a dynamic and unpredictable gaming experience.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- **Scoring System:**
+  - A scoring system keeps track of the user's and computer's scores, indicating the winner of each round.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- **Result Display:**
+  - The game displays the results of each round, indicating whether it's a draw, a user win, or a computer win.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- **Responsive Design:**
+  - The layout and styling are designed to be responsive, ensuring an optimal experience across various screen sizes.
 
-To log into the Heroku toolbelt CLI:
+- **Game Rules:**
+  - Users can access a pop-up with the rules of the game, providing clarity on the interactions between different moves.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- **Game Reset:**
+  - A reset button allows users to start a new game, resetting the scores and game state.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- **Rules Popup:**
+  - A responsive pop-up displays the rules of the game when the user clicks a button, enhancing the user's understanding of the game dynamics.
 
----
+- **Game Outcome Display:**
+  - The game result section shows a detailed outcome of each round, including the user's and computer's choices.
 
-Happy coding!
+- **Scalable Image Options:**
+  - The game provides image options for user moves, allowing for an immersive and visually appealing experience.
+
+- **Scoreboard:**
+  - A scoreboard displays the current scores for both the user and the computer, keeping users informed about the ongoing competition.
+
+## Testing
+
+### Accessibility
+
+- Wave Report - No Errors or Contrast Errors detected.
+- Lighthouse Mobile
+- Lighthouse Desktop
+
+### Manual Testing
+
+Responsiveness was tested on:
+
+- Windows and Mac laptops
+- Windows Surface Pro 8
+- iPad mini
+- Samsung S20FE
+- iPhone 14
+
+No issues were detected.
+
+Additional Responsiveness testing was completed using Dev Tools in FireFox and Chrome.
+
+Browser testing was done in:
+
+- Edge
+- Chrome
+- FireFox
+- Chrome Mobile Browser
+- Safari (Desktop and Mobile)
+
+### Validator Testing
+
+#### HTML
+
+No errors were returned when passing through the official W3C validator.
+
+![Html Validatort](assets/images/documentation/Html-Checker.png)
+
+#### CSS
+
+No errors were found when passing through the official (Jigsaw) validator.
+
+![CSS Validatort](assets/images/documentation/css-validator.png)
+
+## Unfixed Bugs
+
+There are no identified unfixed bugs on this website.
+
+## Deployment
+
+This section should describe the process you went through to deploy the project to a hosting platform (e.g., GitHub).
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+1. In the GitHub repository, navigate to the Settings tab.
+2. From the source section drop-down menu, select the Master Branch.
+3. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://bear81.github.io/rockPaperScissorsLizardSpock/).
+
+## Credits
+
+- [Youtube - Keven Powell CSS Tutorial](#)
+- [Scrimba - JavaScript Tutorial](#)
+- [uiverse.io - Button Styling Website](#)
+- [gradientmagic.com - Background](#)
