@@ -2,6 +2,7 @@
 * {
     /* outline: 1px solid limegreen !important; */
 }
+
 *,
 *:before,
 *:after {
@@ -88,4 +89,20 @@ div {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.scoreboard-table {
+    padding: .5rem;
+    /* border: solid 2px black; */
+    font-size: 1rem;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+.scoreboard-table th, .scoreboard-table td {
+    border: 1px solid #fff;
+    padding: 8px;
+    text-align: center;
+    color: #fff;
 }
