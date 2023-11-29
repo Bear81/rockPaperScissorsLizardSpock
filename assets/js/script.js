@@ -26,6 +26,18 @@ function updateScore(){
 
 }
 
+// Function to open the popup
+function openRulesPopup() {
+    const popup = document.getElementById("rules-popup");
+    popup.style.display = "flex";
+}
+
+// Function to close the popup
+function closeRulesPopup() {
+    const popup = document.getElementById("rules-popup");
+    popup.style.display = "none";
+}
+
 // Remove Console.Log() after testing
 /**
  * Updates variable userChoice when the user selects their move 

@@ -17,6 +17,31 @@
         <section id="game-container">
         <section id="instructions">
             <h1>Choose your move!</h1>
+            <!-- Add a button to trigger the popup -->
+            <button id="rules-btn" onclick="openRulesPopup()">Game Rules</button>
+            
+            <!-- Popup container -->
+            <div id="rules-popup" class="popup">
+                <!-- Close button for the popup -->
+                <span class="close-btn" onclick="closeRulesPopup()">&times;</span>
+                <!-- Content of the popup -->
+                <div class="popup-content">
+                    <h2>Game Rules</h2>
+                    <ul id="game-rule-list">
+                        <li>Scissors cuts Paper</li>
+                        <li>Paper covers Rock</li>
+                        <li>Rock crushes Lizard</li>
+                        <li>Lizard poisons Spock</li>
+                        <li>Spock smashes Scissors</li>
+                        <li>Scissors decapitates Lizard</li>
+                        <li>Lizard eats Paper</li>
+                        <li>Paper disproves Spock</li>
+                        <li>Spock vaporizes Rock</li>
+                        <li>(and as it always has) Rock crushes Scissors</li>
+                    </ul>
+                    <button class="close-btn" onclick="closeRulesPopup()">Close</button>
+                </div>
+            </div>
             <p><a href="#">How to play</a></p>
         </section>
         <!-- users choice area - maybe upgrade buttons to icons? -->
@@ -53,6 +78,45 @@
             <button id="reset-button" onclick="resetGame()">RESET</button></section>
         </section>
     </main>
+    <footer>
+        <footer>
+            <!-- Social Media links -->
+            <!-- The Social Media icon code was taken from Love Running project -->
+            <div>
+                <ul id="social-networks">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Facebook page (opens in a new tab)">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Twitter page (opens in a new tab)">
+                            <i class="fa-brands fa-twitter-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our YouTube page (opens in a new tab)">
+                            <i class="fa-brands fa-youtube-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Instagram page (opens in a new tab)">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- Font Awesome Kit -->
+        <script src="https://kit.fontawesome.com/7ee4a7d5ee.js" crossorigin="anonymous"></script>
+        </body>
+        
+        </html>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
